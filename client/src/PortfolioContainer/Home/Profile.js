@@ -46,11 +46,11 @@ export default function Profile() {
                     2000,
                     "Full Stack Developer 🎯",
                     2000,
-                    "NodeJS Dev 😎",
+                    "NodeJS Framework 😎",
                     2000,
                     "AWS DevOps 🧑‍🚀",
                     2000,
-                    "ReactJS Dev ⚛️",
+                    "ReactJS Framework ⚛️",
                     2000,
                   ]}
                 />
@@ -64,7 +64,7 @@ export default function Profile() {
 
           <div className="profile-options">
             <button className="btn primary-btn"> Hire Me </button>
-            <a href="NG95.pdf" download="Nghiem_Pham NG95.pdf">
+            <a href="Pham-Nguyen-Thanh-Nghiem.pdf" download="CV Pham-Nguyen-Thanh-Nghiem.pdf">
               <Button className="btn highlighted-btn">Get Resume</Button>
             </a>
           </div>
