@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   TOTAL_SCREENS,
   GET_SCREEN_INDEX,
@@ -37,7 +37,7 @@ export default function Header() {
     if (index < TOTAL_SCREENS.length - 1) classes += "header-option-seperator";
 
     if (selectedScreen === index) classes += "selected-header-option";
-    return;
+    return classes;
   };
 
   const switchScreen = (index, screen) => {
@@ -48,6 +48,12 @@ export default function Header() {
     setSelectedScreen(index);
     setShowHeaderOptions(false);
   };
+
+  useEffect(() => {
+    return () => {
+      currentScreenSubscription.unsubscribe();
+    };
+  }, [currentScreenSubscription]);
 
   return (
     <div>

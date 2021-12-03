@@ -9,7 +9,9 @@ export default function ScreenHeading(props) {
       </div>
 
       {props.subHeading ? (
-        <div className="screen-sub-heading"> {/** Why choose me */}
+        <div className="screen-sub-heading">
+          {" "}
+          {/** Why choose me */}
           <span>{props.subHeading}</span>
         </div>
       ) : (
@@ -17,10 +19,9 @@ export default function ScreenHeading(props) {
       )}
 
       <div className="heading-seperator">
-        <div className="seperator-line">
-          <div className="seperator-blod">
-            <div></div>
-          </div>
+        <div className="seperator-line"></div>
+        <div className="seperator-blob">
+          <div></div>
         </div>
       </div>
     </div>
