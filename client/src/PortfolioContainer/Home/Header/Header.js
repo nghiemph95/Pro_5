@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Header.css";
 
 export default function Header() {
+  /** STATE */
   const [selectedScreen, setSelectedScreen] = useState(0);
   const [showHeaderOptions, setShowHeaderOptions] = useState(false);
 
@@ -21,22 +22,22 @@ export default function Header() {
     ScrollService.currentScreenBroadCaster.subscribe(updateCurrentScreen);
 
   const getHeaderOptions = () => {
-    return TOTAL_SCREENS.map((screen, i) => (
+    return TOTAL_SCREENS.map((Screen, i) => (
       <div
-        key={screen.screen_name}
+        key={Screen.screen_name}
         className={getHeaderOptionsClass(i)}
-        onClick={() => switchScreen(i, screen)}
+        onClick={() => switchScreen(i, Screen)}
       >
-        <span>{screen.screen_name}</span>
+        <span>{Screen.screen_name}</span>
       </div>
     ));
   };
 
   const getHeaderOptionsClass = (index) => {
-    let classes = "header-option";
-    if (index < TOTAL_SCREENS.length - 1) classes += "header-option-seperator";
+    let classes = "header-option  ";
+    if (index < TOTAL_SCREENS.length - 1) classes += "header-option-seperator ";
 
-    if (selectedScreen === index) classes += "selected-header-option";
+    if (selectedScreen === index) classes += "selected-header-option ";
     return classes;
   };
 
