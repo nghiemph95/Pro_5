@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animations";
@@ -186,7 +186,7 @@ export default function Resume(props) {
     <div className="resume-screen-container" key="interests">
       <ResumeHeading
         heading="Freelancer"
-        description="Apart from being a tech enthusiast and a code writer, i also love to connect to another people by the other project external that I know simply because these make me better."
+        description="Apart from being a tech enthusiast and a code writer, I also love to connect to another people by the other project external that I know simply because these make me better."
       />
       <ResumeHeading
         heading="Music"
@@ -238,6 +238,13 @@ export default function Resume(props) {
     );
   };
 
+  useEffect(() => {
+    return () => {
+      /* UNSUBSCRIBE THE SUBSCRIPTIONS */
+      fadeInSubscription.unsubscribe();
+    };
+  }, [fadeInSubscription]);
+
   return (
     <div className="resume-container screen-container" id={props.id || ""}>
       <div className="resume-content">
@@ -255,4 +262,3 @@ export default function Resume(props) {
     </div>
   );
 }
-
