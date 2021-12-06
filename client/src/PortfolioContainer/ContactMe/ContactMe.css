@@ -124,7 +124,7 @@ form button:hover {
 button .load {
   width: 100%;
 }
-
+/*Căn chỉnh Loading Bar*/
 button .load img {
   width: 60px;
   color: green;
@@ -148,7 +148,7 @@ button .load img {
     justify-content: space-between;
     margin-top: 30px;
   }
-  /*Căn giữ */
+  /*Căn giữa */
   .img-back {
     flex: 1;
     align-self: center;
