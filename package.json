@@ -1,0 +1,26 @@
+{
+  "name": "NghiemCV",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server.js",
+    "client": "yarn start",
+    "dev": "concurrently \"yarn run server\" \"yarn run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false yarn install --prefix client && yarn run build --prefix client"
+  },
+  "repository": "https://github.com/nghiemph95/Pro_5.git",
+  "author": "nghiemph95 <nghiemph95@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^6.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "nodemailer": "^6.7.2",
+    "nodemon": "^2.0.15",
+    "run": "^1.4.0",
+    "run-server": "^1.0.6",
+    "server": "^1.0.37"
+  }
+}

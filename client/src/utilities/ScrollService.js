@@ -3,7 +3,7 @@ import { Subject } from "rxjs";
 
 export default class ScrollService {
   /* SINGLETON CLASS INSTANCE */
-  static ScrollService = new ScrollService();
+  static scrollHandler = new ScrollService();
   /* Lets instantiate the subject BROADCASTERS */
   static currentScreenBroadcaster = new Subject();
   static currentScreenFadeIn = new Subject();
@@ -14,8 +14,9 @@ export default class ScrollService {
   }
   /* SCROLL TO HIRE ME / CONTACT ME SCREEN */
   scrollToHireMe = () => {
-    let contactMeScreen = document.getElementById("Contace Me");
+    let contactMeScreen = document.getElementById("Contact Me");
     if (!contactMeScreen) return;
+
     contactMeScreen.scrollIntoView({ behavior: "smooth" });
   };
   scrollToHome = () => {
